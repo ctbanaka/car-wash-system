@@ -1,0 +1,24 @@
+<div style="background-color: rgba(241, 234, 217, 0.71); height: 100%;">
+    <div class="container-fluid text-center">
+        <h1>Packages</h1>
+    </div>
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Price</td>
+                <td>Update Price</td> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let apackage of apackages">
+                <th>{{apackage.packageName}}</th>
+                <th>{{apackage.packageDescription}}</th>
+                <th>{{apackage.price}}</th>
+                <th><button routerLink="/admin/update-package/{{apackage.packageName}}" class="btn btn-primary">Change Price</button></th>
+            </tr>
+        </tbody>
+    </table>
+    </div>

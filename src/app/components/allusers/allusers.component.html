@@ -1,0 +1,28 @@
+<div style="background-color: rgba(241, 234, 217, 0.71); height: 100%;">
+<div class="container-fluid text-center">
+    <h1>All Users Data</h1>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>userId</td>
+            <td>userName</td>
+            <td>FullName</td>
+            <td>Phone Number</td>
+            <td>email</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <th>{{user.userId}}</th>
+            <th>{{user.userName}}</th>
+            <th>{{user.fullName}}</th>
+            <th>{{user.phoneNo}}</th>
+            <th>{{user.email}}</th>
+            <th><button (click)="onDelete(user.userName)" class="btn btn-danger">Delete</button></th>
+        </tr>
+    </tbody>
+</table>
+</div>

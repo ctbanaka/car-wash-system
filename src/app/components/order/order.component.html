@@ -1,0 +1,136 @@
+<div class="container text-center backg">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2>Order Car Wash At Your Location</h2>
+      <div class="signup-form">
+        <form [formGroup]="orderForm" novalidate>
+          <div class="row">
+            <div class="text-start fw-bold fs-6">What kind of Car You Drive </div>
+            <div class="mb-3 col-md-6">
+              <label for="carBrand"></label>
+                <input class="form-control" type="text" formControlName="carBrand" placeholder=" car brand ex-Ford">
+                <div *ngIf="carBrand!.invalid && carBrand!.touched">
+                  <small class="text-danger" *ngIf="carBrand!.errors?.['required']">brand required</small>
+                </div> 
+            </div>
+             
+            <div class="mb-3 col-md-6">
+              <label for="model"></label>
+              <input type="text" class="form-control" formControlName="model" placeholder="model ex-figo">
+              <div *ngIf="model!.invalid && model!.touched">
+                <small class="text-danger" *ngIf="model!.errors?.['required']">brand required</small>
+              </div>
+            </div>
+            <div class="mb-3 col-md-12">
+              <label for="color"></label>
+              <input type="text" class="form-control" formControlName="color" placeholder="color">
+              <div *ngIf="color!.invalid && color!.touched">
+                <small class="text-danger" *ngIf="color!.errors?.['required']">color required </small>
+              </div>
+            </div>
+               <div class="text-start pb-1 fw-bold fs-6">Where Your Car will Be Washed</div>
+            <div class="mb-3 col-md-6">
+              <input type="text" class="form-control" formControlName="street" placeholder="street">
+              <div *ngIf="street!.invalid && street!.touched">
+                <small class="text-danger" *ngIf="street!.errors?.['required']">required!!!! </small>
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+  
+              <select class="form-control" formControlName="city" id="city" placeholder="select city">
+                <option type="text" formControlName="city" value="Bangalore">Bangalore</option>
+                <option type="text" formControlName="city" value="Mysore">Mysore</option>
+              </select>
+              <div *ngIf="city!.invalid && city!.touched">
+                <small class="text-danger" *ngIf="city!.errors?.['required']">required!!!! </small>
+              </div>
+            </div>
+            <div class="mb-3 col-md-12">
+              <input type="text" class="form-control" formControlName="pincode" placeholder="pincode">
+              <div *ngIf="pincode!.touched">
+                <small *ngIf="pincode!.errors?.['required']" class="text-danger">pincode is required</small>
+                </div>
+                <div *ngIf="pincode!.invalid">
+                  <small *ngIf="pincode!.errors?.['pattern']" class="text-danger">Enter only digits</small>
+                <small class="text-danger" *ngIf="pincode!.errors?.['minlength']">&nbsp;Must have 6 digits</small>
+                <small class="text-danger" *ngIf="pincode!.errors?.['maxlength']">&nbsp;Must have only 6 digits</small>
+              </div>
+              </div>
+            
+            <div>
+              <h1 class="text-center">Select Wash Package</h1>
+             <table class="table">
+              <thead>
+                <tr>
+                   <th></th>
+                   <th>PLATINUM</th>
+                   <th>GOLD</th>
+                   <th>SILVER</th>
+                   <th>BRONZE</th>
+                </tr> 
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Exterior Hand Wash</th>
+                  <td> 
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>  
+                  </td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                </tr>
+
+                <tr>
+                  <th>Rim-Tyre</th>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                </tr>
+                <tr>
+                  <th>Interior Vacuum
+                  </th>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+             
+                </tr>
+                <tr>
+                  <th>Wipe all Surfaces</th>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                </tr>
+                <tr>
+                  <th>Detailing</th>
+                  <td>  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="#02b71c" size="30" height="30" width="30" xmlns="http://www.w3.org/2000/svg" style="color: rgb(2, 183, 28);"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg></td>
+                   
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td><button value="PLATINUM" class="btn btn-primary" (click)="onClick('PLATINUM')">select</button></td>
+                  <td><button value="GOLD" class="btn btn-primary" (click)="onClick('GOLD')">select</button></td>
+                  <td><button value="SILVER" class="btn btn-primary" (click)="onClick('SILVER')">select</button></td>
+                  <td><button value="BRONZE" class="btn btn-primary" (click)="onClick('BRONZE')">select</button></td>
+                </tr>
+                <div *ngIf="packageName!.touched && pincode!.invalid">
+                  <small *ngIf="packageName!.errors?.['required']" class="text-danger"> required!!</small>
+                </div>
+              </tbody>
+             </table>
+             
+
+
+            </div>
+
+              
+             <h3 class="form-control" style="background-color: rgb(244, 76, 76);" *ngIf="show">Order Value :{{package.price | currency:"INR"}}</h3>
+
+           
+            <button class="btn btn-grad2 mt-4" [disabled]="orderForm.invalid" (click)="book()" type="submit">Book Wash Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ 

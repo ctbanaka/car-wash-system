@@ -1,0 +1,78 @@
+<div class="container-fluid" style="background-color: rgb(250, 248, 248) ; height: 100%;">
+    <div class="row">
+        <div class="col-md-2 pt-5 mt-4 border" style="height: 100%;">
+    
+            <div class="card bg-danger text-white">
+                <div class="card-body fs-6">Open Orders</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a routerLink="/washer/open-orders" class="small text-white stretched-link">View all</a>
+                </div>
+            </div>
+     
+            <div class="card bg-primary text-white mt-4">
+                <div class="card-body fs-6">Your confirmed Orders</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a routerLink="/washer/washer-orders" class="small text-white stretched-link">View Orders</a>
+                </div>
+            </div>
+    
+            <div class="card bg-warning text-white mt-4">
+                <div class="card-body fs-6">Your Profile</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a [routerLink]="['washer-profile']" class="small text-white stretched-link" >View Details</a>
+                    <div class="small text-white"><svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"></path></svg><!-- <i class="fas fa-angle-right"></i> Font Awesome fontawesome.com --></div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="col-md-10 mt-3">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+<!--      
+     <div class="col-md-2">
+            <h2>YourId:&nbsp;<span>{{washer.userId}}</span></h2>
+        </div>
+        <div class="col-md-2">
+            <h2>username:&nbsp;<span>{{washer.userName}}</span></h2>
+        </div>
+        <div class="col-md-2">
+            <h2>contact:&nbsp;<span>{{washer.phoneNo}}</span></h2>
+        </div>
+        <div class="col-md-2">
+            <h2>email:&nbsp;<span>{{washer.email}}</span></h2>
+        </div>
+        <div class="col-md-2">
+            <h2>age:&nbsp;<span>{{washer.age}}</span></h2>
+        </div>
+<div class="container-fluid">
+    <div class="row text-center">
+       <h2 class="pt-1" >All Open Orders</h2>
+    </div>
+</div>
+<router-outlet></router-outlet>
+
+ -->

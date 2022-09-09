@@ -1,0 +1,45 @@
+<div class="contain-fluid mt-3">
+    <div class="row-md-8 offset-md-3">
+        <div class="col-md-8">
+            <div class="card">
+                     
+                   <div class="row text-start ms-4">
+                    <div class="mb-3 col-md-12">
+                        <h1>Hi&nbsp;<span class="text-uppercase" style="color:rgb(252, 89, 89) ;">{{washer.fullName}}</span> </h1>
+                    </div>
+                    <div class="mb-3 col-md-12 ">
+                        <h2 >Your Id:&nbsp;<span>{{washer.userId}}</span></h2>
+                    </div>
+            
+                    <div class="mb-3 col-md-12">
+                        <h2>username:&nbsp;<span>{{washer.userName}} </span></h2>
+                    </div>
+                    <div class="mb-3 col-md-12 ">
+                        <h2>age:&nbsp;<span>{{washer.age}}</span></h2>
+                    </div>
+                    <div class="mb-3 col-md-12 ">
+                        <h2>Gender:&nbsp;<span>{{washer.gender}}</span></h2>
+                    </div>
+                    
+                    <div class="mb-3 col-md-12">
+                        <h2>contact:&nbsp;<span>{{washer.phoneNo}}</span></h2>
+                    </div>
+
+                    <div class="mb-3 col-md-12">
+                        <h2>email:&nbsp;<span>{{washer.email}}</span></h2>
+                    </div>
+
+                    <div class="mb-3 col-md-12">
+                        <button routerLink="/washer/update/{{washer.userName}}" class="btn btn-info">Update Profile</button>
+                    </div>
+                    <!-- <div class="mb-3 col-md-12">
+                        <button class="btn btn-danger ">Delete Account</button>
+                    </div> -->
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

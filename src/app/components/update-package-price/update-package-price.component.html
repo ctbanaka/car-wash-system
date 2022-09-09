@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style="background-color: white;">
+            <div class="text-center fs-2"><h1>Update Package</h1></div>
+            <div class="signup-form">
+             <form [formGroup]="updateForm">
+                <div class="row">
+                    <div class="mb-3 col-md-12">
+                        <label>Package<span class="text-danger"></span></label>
+                        <input type="text" name="packageName" formControlName="packageName" class="form-control" placeholder="packageName">
+                    </div>
+                    <div class="mb-3 col-md-12">
+                        <label>Price<span class="text-danger">*</span></label>
+                        <input type="text" name="phoneNo" formControlName="price" class="form-control" placeholder="price">
+                    </div>
+                    <div class="mb-3 col-md-12">
+                        <label>Description<span class="text-danger"></span></label>
+                        <input type="email" name="email" formControlName="packageDescription" class="form-control" placeholder="Description">
+                    </div>
+                    <div class="col-md-12">
+                        <button (click)="update()" type="submit" class="btn btn-warning ">update</button>
+                     </div>
+                </div>
+             </form>
+        </div>
+    </div>
+</div>
+</div>

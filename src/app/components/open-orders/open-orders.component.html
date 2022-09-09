@@ -1,0 +1,31 @@
+<div style="background-color: rgba(244, 242, 235, 0.71); height: 100%;">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>orderId</th>
+                <th colspan="3"> Car Details</th>
+                <th colspan="3">Address Details</th>
+                <th>packageName</th>
+                 <th>totalPrice</th> 
+                 <th>order date</th>
+                 <th>orderStatus</th>
+                 <th>accept</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td><a routerLink="/order-detail/{{order.orderId}}">{{order.orderId}}</a></td>
+                <td class="fw-semibold" colspan="3">{{order.carBrand}}&nbsp;{{order.model}}&nbsp;{{order.color}} </td>
+                <td class="fw-semibold"  colspan="3">{{order.street}}&nbsp;{{order.city}}&nbsp;{{order.pincode}}</td>
+                <td>{{order.packageName}}</td> 
+                <td>{{order.totalPrice}}</td>
+                <td>{{order.placedOn}}</td>
+                <td>{{order.orderStatus}}</td>
+                <td><button (click)="acceptOrder(order.orderId)" class="btn btn-primary">Accept</button></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    

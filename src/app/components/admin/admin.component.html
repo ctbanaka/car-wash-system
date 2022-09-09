@@ -1,0 +1,91 @@
+<div class="container-fluid" style="background-color: rgb(250, 248, 248) ; height: 100%;">
+       <div class="row text-center">
+        <h3>Admin Dashboard</h3>
+       </div>
+    <div class="row">
+        <div class="col-md-2 pt-3 mt-4 border" style="height: 100%;">
+    
+            <div class="card bg-danger text-white">
+                <div class="card-body fs-6">All Orders</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a routerLink="/admin/all-orders" class="small text-white stretched-link"> View Orders</a>
+                </div>
+            </div>
+    
+            <div class="card bg-primary text-white mt-4">
+                <div class="card-body fs-6">All Washers</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a routerLink="/admin/allwashers" class="small text-white stretched-link">View washers</a>
+                </div>
+            </div>
+    
+            <div class="card bg-warning text-white mt-4">
+                <div class="card-body fs-6">All Customers</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a routerLink="/admin/allusers" class="small text-white stretched-link" >View Details</a>
+                    <div class="small text-white"><svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"></path></svg><!-- <i class="fas fa-angle-right"></i> Font Awesome fontawesome.com --></div>
+                </div>
+            </div>
+    
+            <div class="card bg-success text-white mt-4">
+                <div class="card-body fs-6">Packages</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a routerLink="/admin/all-packages" class="small text-white stretched-link" >View Details</a>
+                    <div class="small text-white"><svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"></path></svg><!-- <i class="fas fa-angle-right"></i> Font Awesome fontawesome.com --></div>
+                </div>
+            </div>
+    
+
+        </div>
+        <div class="col-md-10 mt-3">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div>
+<div class="container text-center py-4">
+    <div class="row justify-content-md-start">
+         <div class="col-md-3" style="background-color: rgb(253, 135, 76); border-radius: 7px;">
+             <a style="color: white;" routerLink="/allusers"><h1 >All Users</h1></a>
+         </div>
+
+         <div class="col-md-3" style="background-color: rgb(240, 103, 203); border-radius: 7px;">
+            <a style="color: white;" routerLink="/allwashers"><h1 >All Washers</h1></a>
+        </div>
+
+        <div class="col-md-3" style="background-color: rgb(201, 250, 128); border-radius: 7px;">
+            <a style="color: rgb(243, 91, 91);" routerLink="/all-orders"><h1 >All orders</h1></a>
+        </div>
+
+    </div>
+</div>
+</div>
+  -->

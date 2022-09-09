@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style="background-color: white;">
+            <div class="text-center fs-2"><h1>Update Profile</h1></div>
+            <div class="signup-form">
+             <form [formGroup]="editForm">
+                <div class="row">
+                    <div class="mb-3 col-md-12">
+                        <label>name<span class="text-danger">*</span></label>
+                        <input type="text" name="fullName" formControlName="fullName" class="form-control" placeholder="name">
+                    </div>
+                    <div class="mb-3 col-md-12">
+                        <label>Phone Number<span class="text-danger">*</span></label>
+                        <input type="text" name="phoneNo" formControlName="phoneNo" class="form-control" placeholder="phone number">
+                    </div>
+                    <div class="mb-3 col-md-12">
+                        <label>email<span class="text-danger"></span></label>
+                        <input type="email" name="email" formControlName="email" class="form-control" placeholder="example@mail.com">
+                    </div>
+                    <div class="mb-3 col-md-12">
+                        <label>age<span class="text-danger"></span></label>
+                        <input type="number" name="" formControlName="age" class="form-control" placeholder="21">
+                    </div>
+                    <div class="col-md-12">
+                        <button (click)="update()" type="submit" class="btn btn-warning ">update</button>
+                     </div>
+                </div>
+             </form>
+        </div>
+    </div>
+</div>
+</div>

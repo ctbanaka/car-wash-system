@@ -1,0 +1,28 @@
+
+<div class="backg">
+<div class="center">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+    <div class="txt_field">
+      <input type="text" formControlName="userName" name="userName" id="userName" required>
+       
+      <label for="userName">Username</label>
+      <div *ngIf="userName!.invalid && userName!.touched">
+        <small class="text-danger" *ngIf="userName!.errors?.['required']">invalid username</small>
+      </div> 
+    </div>
+    <div class="txt_field">
+      <input type="password" formControlName="password" name="password" id="password" required>
+      <span></span>
+      <label>Password</label>
+    </div> 
+    <input type="submit" [disabled]="loginForm.invalid" value="Login" class="btn btn-grad2">
+    <div><span class="text-danger">{{check}}</span></div>
+    <div class="signup_link">
+      Not a member? <a routerLink="/signup">Signup</a>
+    </div>
+  </form>
+</div>
+</div>
+
+ 

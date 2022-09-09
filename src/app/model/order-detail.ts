@@ -1,0 +1,21 @@
+export class OrderDetails{
+ orderId!:number;
+ userName!:string
+  fullName!:string;
+  phoneNo!:string;
+  email!:string;
+  street!:string;
+  city!:string;
+  pincode!:number;
+  carBrand!:string;
+  model!:string;
+  color!:string;
+  packageName!:string; 
+  washerName!:string;
+  washerFullName!:string;
+  washerphoneNo!:string;
+  washeremail!:string;
+  totalPrice!:number;
+  orderStatus!:string;
+  placedOn!:Date;
+}

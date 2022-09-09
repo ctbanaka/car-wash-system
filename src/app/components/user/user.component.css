@@ -1,0 +1,7 @@
+ .border{
+  border: solid;
+  border-color: black;
+  height:100%;
+  border-radius: 8px;
+  border-width: 10px;
+ }

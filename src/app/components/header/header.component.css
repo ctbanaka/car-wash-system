@@ -1,0 +1,18 @@
+.hidden {
+    display: none;
+}
+
+.button{
+    border-radius: 8px;
+    background: linear-gradient(to right,#cc2e12, #f4763c);
+    color: #fff;
+}
+
+.nav-color{
+   background: rgb(240, 237, 237);
+}
+
+.font-size{
+    font-size: 16px;
+    color:black;
+}

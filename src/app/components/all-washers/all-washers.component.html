@@ -1,0 +1,34 @@
+<div style="background-color: rgba(241, 234, 217, 0.71); height: 100%;">
+    <div class="container-fluid text-center">
+        <h1>All Washer Data</h1>
+    </div>
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>userId</th>
+                <th>userName</th>
+                <th>FullName</th>
+                <th>Phone Number</th>
+                <th>email</th>
+                <th>age</th>
+                <th>Gender</th>
+                <th>Active?</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let washer of washers">
+                <td>{{washer.userId}}</td>
+                <td>{{washer.userName}}</td>
+                <td>{{washer.fullName}}</td>
+                <td>{{washer.phoneNo}}</td>
+                <td>{{washer.email}}</td>
+                <td>{{washer.age}}</td>
+                <td>{{washer.gender}}</td>
+                <td>{{washer.isActive}}</td>
+                <td><button (click)="onDelete(washer.userName)" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

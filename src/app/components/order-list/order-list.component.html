@@ -1,0 +1,42 @@
+<!-- <input type="radio" id="filter" name="filter" value="washerName" (click)="ordersToWasher()">
+
+<label >Washer</label><br>
+
+<input type="radio" id="filter" name="filter" value="open" (click)="orderStatus('open')">
+
+<label >open</label><br>
+<div *ngIf="this.role=='admin'">
+<input type="radio" id="filter" name="filter" value="accepted" (click)="orderStatus('accepted')" *ngIf="this.role=='admin'">
+<label for="">accepted orders</label>
+<input type="radio" id="filter" name="filter" value="all" (click)="orderStatus('all')" *ngIf="this.role=='admin'"> -->
+
+<!-- <label >all</label></div> -->
+<div style="background-color: rgba(244, 242, 235, 0.71); height: 100%;">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>orderId</th>
+                <th colspan="3"> Car Details</th>
+                <th colspan="3">Address Details</th>
+                <th>packageName</th>
+                <th>washer name</th>
+                <th>totalPrice</th>
+                <th>order date</th>
+                <th>orderStatus</th>
+                 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td><a routerLink="/order-detail/{{order.orderId}}">{{order.orderId}}</a></td>
+                <td class="fw-semibold" colspan="3">{{order.carBrand}}&nbsp;{{order.model}}&nbsp;{{order.color}} </td>
+                <td class="fw-semibold" colspan="3">{{order.street}}&nbsp;{{order.city}}&nbsp;{{order.pincode}}</td>
+                <td>{{order.packageName}}</td>
+                <td>{{order.washerName}}</td>
+                <td>{{order.totalPrice}}</td>
+                <td>{{order.placedOn}}</td>
+                <td>{{order.orderStatus}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

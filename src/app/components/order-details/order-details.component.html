@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row back m-2">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center" style="height:75px ;">
+                <h3 class="fs-3 align-middle">Order Details For Id &nbsp;: <span style="color: black;">{{detail.orderId}}</span></h3>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-md-4 text-center offset-md-2 cb">
+                <h3 class="title fs-5">Car Details</h3>
+                <p class="fs-6">Brand:&nbsp;{{detail.carBrand}}</p>
+                <p class="fs-6">model:&nbsp;{{detail.model}}</p>
+                <p class="fs-6">color:&nbsp;{{detail.color}}</p>
+            </div>
+            <div class="col-md-4 text-center cb">
+                <h3 class="title fs-5">Address Details</h3>
+                <p>street:&nbsp;{{detail.street}}</p>
+                <p>city:&nbsp;{{detail.city}}</p>
+                <p> pincode:&nbsp;{{detail.pincode}}</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center offset-md-2 cb2">
+                <h3 class="title fs-5">Customer Details</h3>
+                <p>name:&nbsp;{{detail.fullName}}</p>
+                <p> contact:&nbsp;{{detail.phoneNo}}</p>
+                <p>email:&nbsp;{{detail.email}}</p>
+                <p></p>
+            </div>
+            <div class="col-md-4 text-center cb2">
+                <h3 class="title fs-5">washer Details</h3>
+                <p>name:&nbsp;{{detail.washerFullName}}</p>
+                <p>contact:&nbsp;{{detail.washerphoneNo}}</p>
+                <p>email:&nbsp;{{detail.washeremail}}</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center offset-md-2 cb">
+                <h3 class="title fs-5">Order Status</h3>
+            </div>
+            <div class="col-md-4 text-center cb">
+                <p>order &nbsp;{{detail.orderStatus}}</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4 text-center offset-md-2 cb2">
+               <h3 class="title fs-5">Package Selected</h3> 
+            </div>
+            <div class="col-md-4 text-center cb2">
+                <p>{{detail.packageName}}</p>
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center offset-md-2 cb">
+                <h3 class="title fs-5">Ordered Date</h3>
+            </div>
+            <div class="col-md-4 text-center cb">
+                <p>{{detail.placedOn}}</p>
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center offset-md-2 cb2">
+                 <h3 class="title fs-5">Price</h3>
+            </div>
+            <div class="col-md-4 text-center cb2">
+                <p>{{detail.totalPrice | currency:'INR'}}</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>

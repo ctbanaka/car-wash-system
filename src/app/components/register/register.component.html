@@ -1,0 +1,80 @@
+<div class="container">
+        <div class="row bgg">
+                <div class="col-md-6 offset-md-3">
+                        <div class="text-center fs-2 pt-5">
+                                <h1 style="color: rgb(242, 39, 73);">Get Your Car Washed</h1>
+                        </div>
+                        <div class="signup-form">
+                                <form [formGroup]="registerForm"  class="mt-5 border p-4 bg-light shadow" novalidate>
+                                      <div class="row">
+                                        <div class="mb-3 col-md-12">
+                                                <label>username<span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="userName" [class.is-invalid]="userName!.invalid && userName!.touched" formControlName="userName"
+                                                placeholder="username">
+                                          
+                                         <small class="password-info mt-2">username can't changed once registered  </small>
+                                      
+                                              <div *ngIf="userName!.invalid && userName!.touched">
+                                                <small class="text-danger" *ngIf="userName!.errors?.['required']">User name is required</small>
+                                              </div>    
+                                            </div>
+                                            <div class="mb-3 col-md-12">
+                                                <label for="fullName">FullName<span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="fullName" formControlName="fullName" id="fullName" placeholder="first name and last name">
+                                                
+                                                <div *ngIf="fullName!.invalid && fullName!.touched">
+                                                        <small class="text-danger" *ngIf="fullName!.errors?.['required']"> name is required</small>
+                                                      </div>
+                                            </div>
+                                            <div class="mb-3 col-md-12">
+                                                <label for="phoneNo" >Phone Number<span class="text-danger">*</span></label>
+                                                <input type="text" formControlName="phoneNo" name="phoneNo" class="form-control"  minlength="10" maxlength="10" required="required" placeholder="phone number">
+                                                
+                                                        <div *ngIf="phoneNo!.touched"> 
+                                                        <small *ngIf="phoneNo!.errors?.['required']" class="text-danger">Phone number is required</small>
+                                                        </div>
+                                                        <div *ngIf="phoneNo!.invalid">
+                                                        <small *ngIf="phoneNo!.errors?.['pattern']" class="text-danger">Enter only digits</small>
+                                                        <small class="text-danger" *ngIf="phoneNo!.errors?.['minlength']"> &nbsp;Must have only 10 digits</small>
+                                                        <small class="text-danger" *ngIf="phoneNo!.errors?.['maxlength']">&nbsp;Must have only 10 digits</small>
+                                                        </div>
+                                            </div>
+                                            <div class="mb-3 col-md-12">
+                                                <label for="email">Email address<span class="text-danger">*</span></label>
+                                                <input type="email" formControlName="email" name="email" class="form-control" id="email"
+                                                placeholder="name@example.com">
+                                        
+                                            <small class="text-danger" [class.d-none]="email!.valid || email!.untouched">Email is required</small>
+                                            </div>
+                                            
+                                            <div class="mb-3 col-md-12">
+                                                <label for="password">Password<span class="text-danger">*</span></label>
+                                                <input type="password" formControlName="password" class="form-control" id="password"
+                                                placeholder="Password">
+                                        
+                                               
+                        
+                                                <div *ngIf="password!.invalid && password!.touched">
+                                                        <small class="text-danger" *ngIf="password!.errors?.['required']">password is required</small>
+                                                        <small class="text-danger" *ngIf="password!.errors?.['minlength']">Must have atleast 8 charecter</small>
+                                                      </div>  
+                                            </div> 
+                                            <div class="mb-3 col-md-12">
+                                                <label>Confirm Password</label>
+                                                <input type="password" formControlName="confirmPassword" [class.is-invalid]="registerForm.errors?.['misMatch']" class="form-control"
+                                                placeholder="Password">
+                                        
+                                            <small class="text-danger" *ngIf="registerForm.errors?.['misMatch']">Passwords do not match</small>
+                                            </div>
+                                            <div class="mb-3 col-md-12">
+                                                <button type="submit" (click)="register()" [disabled]="registerForm.invalid" class="btn btn-grad submit_btn w-100 my-4">Continue</button>
+                                            </div>
+
+                                 </div>
+                                </form>
+                                <p class="text-center mt-3 text-secondary">If you have account, Please <a routerLink="/login">Login Now</a></p>
+                        </div>
+                </div>
+        </div>
+</div>
+
