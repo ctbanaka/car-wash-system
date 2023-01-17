@@ -15,7 +15,7 @@ export class OrderService {
   url2:string="http://localhost:8084/order/userorders/";
   acceptUrl="http://localhost:8084/order/acceptorder";
   washerUrl ="http://localhost:8084/order/washerorders/";
-   orderUrl="http://localhost:8084/order/orderdetail/"
+  orderUrl="http://localhost:8084/order/orderdetail/";
 
   constructor(private http:HttpClient) { }
 
